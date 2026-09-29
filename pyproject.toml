@@ -1,0 +1,4 @@
+# uv 워크스페이스 루트. 이 파일 자체는 패키지가 아니다.
+# 새 단계에서 Python 프로젝트를 시작하면 members에 디렉터리를 추가한다.
+[tool.uv.workspace]
+members = ["00-python-backend"]

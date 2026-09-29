@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+
+# uv
+.uv/
+
+# 테스트·커버리지
+.pytest_cache/
+.coverage
+htmlcov/
+
+# 실험 산출물 (수치 요약은 results/*.md 로 커밋)
+*.ckpt
+*.pt
+*.safetensors
+wandb/
+mlruns/
+
+# 환경·비밀
+.env
+.env.*
+!.env.example
+
+# 에디터·OS
+.DS_Store
+.idea/
+.vscode/

@@ -1,0 +1,46 @@
+# AI Agent 엔지니어 커리큘럼
+
+주 10시간 기준 30주(버퍼 포함 약 9개월) 커리큘럼의 모노레포. 자격증 없이 실력과 공개 결과물로 증명한다.
+
+- 진행 상태: **[CURRICULUM.md](CURRICULUM.md)의 체크박스가 단일 출처**
+- 작업 규칙과 원칙: [CLAUDE.md](CLAUDE.md)
+
+## 구조
+
+| 디렉터리 | 단계 | 주차 |
+| --- | --- | --- |
+| [`00-python-backend/`](00-python-backend/) | Python 백엔드 | 1–4주 |
+| [`01-ml-basics/`](01-ml-basics/) | ML/DL 기초 | 5–10주 |
+| [`02-llm-apps/`](02-llm-apps/) | LLM 응용 | 11–16주 |
+| [`03-agent-core/`](03-agent-core/) | Agent 코어 | 17–24주 |
+| [`04-production/`](04-production/) | 프로덕션·MLOps | 25–30주 |
+| [`capstone/`](capstone/) | 업무 자동화 멀티에이전트 | v1 24주 · v2 30주 |
+| [`blog/`](blog/) | 글·발표 (대외 검증) | 상시 |
+
+## 원칙
+
+1. **직접 구현 → 프레임워크** — 핵심을 바닥부터 한 번 만든 뒤에 프레임워크를 쓴다.
+2. **수치 기록** — 2단계부터 모든 실험은 설정별 품질·지연·비용 수치로 남긴다.
+3. **공개 산출물** — 단계는 레포, 글, 배포물 중 하나가 실제로 나와야 끝난다.
+
+## 개발 환경
+
+Python은 [uv](https://docs.astral.sh/uv/)로 관리한다. 루트가 uv 워크스페이스다.
+
+```bash
+# uv 설치 (한 번만)
+curl -LsSf https://astral.sh/uv/install.sh | sh
+
+# 0단계 API 실행
+cd 00-python-backend
+uv run uvicorn stage00.main:app --reload
+
+# 테스트
+uv run pytest
+```
+
+새 단계에서 Python 프로젝트를 시작하면 루트 `pyproject.toml`의 `tool.uv.workspace.members`에 추가한다.
+
+## 현재 상태
+
+구조와 README, 0단계 FastAPI + pytest 골격까지 세팅됨. 주차 과제 코드는 아직 없다.
