@@ -21,7 +21,7 @@
 TS로 하던 걸 Python으로 같은 수준에서 할 수 있게 만든다.
 
 **1주**
-- [ ] TS와 다른 점 정리: 타입힌트, dataclass, 제너레이터, 컨텍스트 매니저
+- [x] TS와 다른 점 정리: 타입힌트, dataclass, 제너레이터, 컨텍스트 매니저 → [`00-python-backend/notes/week01.md`](00-python-backend/notes/week01.md)
 - [ ] 『Fluent Python』 데이터 모델·함수 파트 발췌
 
 **2주**
