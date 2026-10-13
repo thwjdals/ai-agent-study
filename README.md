@@ -29,12 +29,14 @@
 
 ```bash
 brew install ollama && brew services start ollama
-ollama pull qwen3:30b-a3b   # 기본 실습 (MoE, 약 19GB)
-ollama pull qwen3:8b        # 약한 모델 비교용 (약 5GB)
-ollama pull bge-m3          # 임베딩, 한국어 지원 (2단계 RAG)
+ollama pull gpt-oss:20b      # 기본 실습 (OpenAI 공개 가중치, MoE, 약 14GB)
+ollama pull gemma3:12b       # 약한 모델 비교용 (Google, 약 8GB)
+ollama pull embeddinggemma   # 다국어 임베딩 (2단계 RAG)
 brew install --cask lm-studio   # MLX 형식 비교용 (3주)
 cp .env.example .env
 ```
+
+중국 모델(Qwen, BGE 등)은 정치 주제 편향과 일부 기업의 사용 금지 정책 때문에 쓰지 않는다. Facton 뉴스 데이터를 다루기 때문이다.
 
 OpenAI 호환 엔드포인트는 Ollama `http://localhost:11434/v1`, LM Studio `http://localhost:1234/v1`.
 
