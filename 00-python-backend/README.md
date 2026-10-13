@@ -1,24 +1,22 @@
-# 0단계 · Python 백엔드 (1–4주)
+# 0단계 · Python 백엔드 (1–2주)
 
 TS로 하던 걸 Python으로 같은 수준에서 할 수 있게 만든다. AI 팀 대부분의 주 언어가 Python이다.
 
-주차별 항목은 [`../CURRICULUM.md`](../CURRICULUM.md#0단계--python-백엔드-1-4주)의 체크박스를 본다.
+주차별 항목은 [`../CURRICULUM.md`](../CURRICULUM.md#0단계--python-백엔드-12주)의 체크박스를 본다.
 
 ## 이번 단계에서 만드는 것
 
 | 주차 | 초점 | 남는 것 |
 | --- | --- | --- |
-| 1주 | 언어 차이 (타입힌트, dataclass, 제너레이터, 컨텍스트 매니저) | 비교 노트 |
-| 2주 | asyncio | **직접 구현**: 동시성 제한 + 지수 백오프 비동기 HTTP 클라이언트 |
-| 3주 | FastAPI, Pydantic, DI, SSE / pytest | 이 골격을 확장 |
-| 4주 | PostgreSQL, SQLAlchemy | **산출물**: LLM 게이트웨이 서버 |
+| 1주 | 언어 차이, asyncio | 비교 노트, **직접 구현**: 동시성 제한 + 지수 백오프 비동기 HTTP 클라이언트 |
+| 2주 | FastAPI, Pydantic, DI, SSE / pytest | **산출물**: LLM 게이트웨이 |
 
-산출물인 게이트웨이는 멀티 프로바이더, 스트리밍, 레이트리밋, 요청 로그 DB 저장까지 포함한다.
+게이트웨이는 로컬 모델(Ollama·LM Studio의 OpenAI 호환 서버)과 클라우드 API를 같은 인터페이스로 묶고,
+스트리밍과 요청 로그 SQLite 저장까지 포함한다. 3단계 하네스가 이 게이트웨이를 통해 모델을 부른다.
 
 ## 졸업 기준
 
 - 게이트웨이 GitHub 공개, 테스트 커버리지 80% 이상, README에 구조와 실행법
-- 글 1편: TS 개발자가 본 Python 비동기 → 초안은 [`../blog/`](../blog/)
 
 ## 현재 골격
 

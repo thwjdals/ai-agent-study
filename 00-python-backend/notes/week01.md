@@ -20,7 +20,7 @@ TS에서 타입이 하던 역할의 절반은 Python에서 던더가 한다.
 | `readonly` / `as const` | `@dataclass(frozen=True)`, `Final` | frozen은 런타임에 실제로 막는다 |
 | `class` + 생성자 보일러플레이트 | `@dataclass` | `__init__`·`__eq__`·`__repr__` 자동 |
 | `function*` / `yield` | `def` + `yield` | Python 쪽이 훨씬 관용적으로 쓰인다 |
-| `for await (… of …)` | `async for` | 2주차 |
+| `for await (… of …)` | `async for` | 1주 후반 |
 | `using` (TS 5.2, Symbol.dispose) | `with` + `__enter__`/`__exit__` | Python은 20년 전부터 있던 핵심 문법 |
 | 데코레이터 (클래스 멤버 위주) | 데코레이터 (함수·클래스 어디나) | Python은 그냥 고차함수다 |
 | `Object.freeze`, 스프레드 | `frozen=True`, `dataclasses.replace` | |
@@ -78,7 +78,7 @@ count(CharTokenizer(), "hi")              # → 2, 타입체커도 통과
 | 외부에서 온 dict 모양 (JSON 응답) | `TypedDict` |
 | 외부 입력을 **검증**해야 함 (API 바디, 설정) | `pydantic.BaseModel` |
 
-`TypedDict`는 런타임에 그냥 dict다. 검증이 필요하면 Pydantic — 3주차 FastAPI에서 본격적으로.
+`TypedDict`는 런타임에 그냥 dict다. 검증이 필요하면 Pydantic — 2주차 FastAPI에서 본격적으로.
 
 ---
 
@@ -145,10 +145,10 @@ list(g)   # → []            한 번 쓰면 소진된다 (TS iterator와 동일
   `[...]`로 감싸는 순간 전부 메모리에 올라간다. TS의 `.map().filter()` 체인이 매번 배열을
   새로 만드는 것과 대비되는 습관.
 - `yield from other_gen()` = 위임. 재귀적 순회에 쓴다.
-- **중요:** `yield`가 멈췄다 재개하는 이 메커니즘이 `async`/`await`의 뿌리다. 2주차 asyncio가
+- **중요:** `yield`가 멈췄다 재개하는 이 메커니즘이 `async`/`await`의 뿌리다. 1주 후반 asyncio가
   이 위에 올라간다. 이번 주에 제너레이터를 몸으로 익혀두면 다음 주가 쉬워진다.
 
-LLM 스트리밍이 곧 이 모양이다 — 3주차 SSE에서 `yield`로 토큰을 흘려보낸다.
+LLM 스트리밍이 곧 이 모양이다 — 2주차 SSE에서 `yield`로 토큰을 흘려보낸다.
 
 ---
 
@@ -191,7 +191,7 @@ print("여기까지 온다")               # 실행된다
 처음에 예외가 사라지는 걸로 보일 수 있으니 반환값을 반드시 의식할 것.
 
 실무에서 만나는 지점: DB 세션/트랜잭션, 파일, httpx 클라이언트, 락, 그리고 FastAPI의 `lifespan`.
-`async with`(비동기 버전)는 2주차.
+`async with`(비동기 버전)는 1주 후반.
 
 ---
 
@@ -254,7 +254,7 @@ def retry(times: int):
 def flaky(): ...
 ```
 
-이 3중 중첩(인자 → 함수 → 래퍼)이 데코레이터의 기본형이다. **2주차에 만들 재시도 클라이언트가
+이 3중 중첩(인자 → 함수 → 래퍼)이 데코레이터의 기본형이다. **1주 후반에 만들 재시도 클라이언트가
 이 구조의 async 버전이다.**
 
 알아둘 `functools`:
@@ -272,7 +272,7 @@ def flaky(): ...
 
 ## TS 경험이 그대로 먹히는 것 / 새로 배워야 하는 것
 
-**그대로 먹힌다**: 구조적 타이핑 사고, 제너레이터/이터레이터 개념, async 멘탈모델(2주차),
+**그대로 먹힌다**: 구조적 타이핑 사고, 제너레이터/이터레이터 개념, async 멘탈모델(1주 후반),
 유니온·리터럴 타입, 불변 데이터 선호, 고차함수.
 
 **새로 배워야 한다**:
@@ -284,7 +284,7 @@ def flaky(): ...
 
 ## 다음 주로 넘기는 것
 
-- 제너레이터 → `async`/`await`, 이벤트 루프 (2주차)
-- `retry` 데코레이터 → 지수 백오프 + 세마포어 붙인 async HTTP 클라이언트 (2주차 직접 구현)
-- 타입힌트 런타임 활용 → Pydantic·의존성 주입 (3주차)
-- `yield` → SSE 스트리밍 (3주차)
+- 제너레이터 → `async`/`await`, 이벤트 루프 (1주 후반)
+- `retry` 데코레이터 → 지수 백오프 + 세마포어 붙인 async HTTP 클라이언트 (1주 후반 직접 구현)
+- 타입힌트 런타임 활용 → Pydantic·의존성 주입 (2주차)
+- `yield` → SSE 스트리밍 (2주차)

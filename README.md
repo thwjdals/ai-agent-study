@@ -1,6 +1,6 @@
 # AI Agent 엔지니어 커리큘럼
 
-주 10시간 기준 30주(버퍼 포함 약 9개월) 커리큘럼의 모노레포. 자격증 없이 실력과 공개 결과물로 증명한다.
+주 10시간 기준 12주 커리큘럼의 모노레포. 목표는 응용 AI 엔지니어 이직. 2026-10-13에 30주안에서 줄였다. 자격증 없이 실력과 공개 결과물로 증명한다.
 
 - 진행 상태: **[CURRICULUM.md](CURRICULUM.md)의 체크박스가 단일 출처**
 - 작업 규칙과 원칙: [CLAUDE.md](CLAUDE.md)
@@ -9,12 +9,12 @@
 
 | 디렉터리 | 단계 | 주차 |
 | --- | --- | --- |
-| [`00-python-backend/`](00-python-backend/) | Python 백엔드 | 1–4주 |
-| [`01-ml-basics/`](01-ml-basics/) | ML/DL 기초 | 5–10주 |
-| [`02-llm-apps/`](02-llm-apps/) | LLM 응용 | 11–16주 |
-| [`03-agent-core/`](03-agent-core/) | Agent 코어 | 17–24주 |
-| [`04-production/`](04-production/) | 프로덕션·MLOps | 25–30주 |
-| [`capstone/`](capstone/) | 업무 자동화 멀티에이전트 | v1 24주 · v2 30주 |
+| [`00-python-backend/`](00-python-backend/) | Python 백엔드 | 1–2주 |
+| [`01-ml-basics/`](01-ml-basics/) | LLM 기초와 로컬 모델 | 3주 |
+| [`02-llm-apps/`](02-llm-apps/) | 검색과 평가 | 4–5주 |
+| [`03-agent-core/`](03-agent-core/) | Agent 코어 | 6–9주 |
+| [`04-production/`](04-production/) | 운영과 최적화 | 10–11주 |
+| [`capstone/`](capstone/) | 평가 수치가 붙은 에이전트 하네스 | 12주 |
 | [`blog/`](blog/) | 글·발표 (대외 검증) | 상시 |
 
 ## 원칙
