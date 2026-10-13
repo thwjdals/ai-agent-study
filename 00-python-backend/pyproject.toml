@@ -1,7 +1,7 @@
 [project]
 name = "stage00-python-backend"
 version = "0.1.0"
-description = "0단계 · Python 백엔드 (1-4주) — FastAPI + pytest 골격"
+description = "0단계 · Python 백엔드 (1-2주) — FastAPI + pytest 골격"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115",

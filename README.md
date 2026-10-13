@@ -25,6 +25,21 @@
 
 ## 개발 환경
 
+### 로컬 모델
+
+```bash
+brew install ollama && brew services start ollama
+ollama pull qwen3:30b-a3b   # 기본 실습 (MoE, 약 19GB)
+ollama pull qwen3:8b        # 약한 모델 비교용 (약 5GB)
+ollama pull bge-m3          # 임베딩, 한국어 지원 (2단계 RAG)
+brew install --cask lm-studio   # MLX 형식 비교용 (3주)
+cp .env.example .env
+```
+
+OpenAI 호환 엔드포인트는 Ollama `http://localhost:11434/v1`, LM Studio `http://localhost:1234/v1`.
+
+### Python
+
 Python은 [uv](https://docs.astral.sh/uv/)로 관리한다. 루트가 uv 워크스페이스다.
 
 ```bash
